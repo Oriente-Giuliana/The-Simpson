@@ -19,7 +19,7 @@ mycursor.execute("""
     Name VARCHAR(30),
     Surname VARCHAR(30),
     gender VARCHAR(30),
-    PRIMARY KEY (Unit)
+    PRIMARY KEY (Name)
   );""")
 
 #Delete data from the table personaggi
@@ -27,7 +27,7 @@ mycursor.execute("DELETE FROM THE_SIMPSON.personaggi")
 mydb.commit()
 
 #Read data from a csv file
-Simpsons_data = pd.read_csv('./cr-unit-attributes.csv', index_col=False, delimiter = ',')
+Simpsons_data = pd.read_csv('./simpsons_characters.csv', index_col=False, delimiter = ',')
 Simpsons_data = Simpsons_data.fillna('Null')
 print(Simpsons_data.head(20))
 
@@ -35,7 +35,7 @@ print(Simpsons_data.head(20))
 for i,row in Simpsons_data.iterrows():
     cursor = mydb.cursor()
     #here %S means string values 
-    sql = "INSERT INTO THE_SIMPSON.personaggi VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    sql = "INSERT INTO THE_SIMPSON.personaggi VALUES (%s,%s,%s)"
     cursor.execute(sql, tuple(row))
     print("Record inserted")
     # the connection is not auto committed by default, so we must commit to save our changes
