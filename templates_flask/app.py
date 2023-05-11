@@ -2,7 +2,6 @@ from flask import render_template
 from flask import Flask
 import mysql.connector
 
-
 app = Flask(__name__)
 
 mydb = mysql.connector.connect(
@@ -15,7 +14,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 @app.route('/units')
-def personaggiList():
+def PersonaggiList():
     mycurson.execute("SELECT * FROM THE_SIMPSON")
     myresult=mycursor.fetchall()
     return render_template('the_simpson.html', units=myresult)
