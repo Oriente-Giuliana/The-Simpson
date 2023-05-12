@@ -1,21 +1,21 @@
-Name,Surname,gender
-Homer, Simpson,male
-Bart,Simpson,male
-Marge,Simpson,female
-Lisa,Simpson,female
-Abraham,Simpson,male
-Montgomery,Burns,male
-Waylon,Smithers,male
-Apu,Nahasapeemapetilon,male
-Ned,Flanders,male
-Boe,Szyslak,male
-Edna,Caprapall,female
-Nelson,Muntz,male
-Luann,Van Houten,female
-Clancy,Winchester,male
-Patty,Bouvier,female
-Selma,Bouvier,female
-Bob,Telespalla,male
-Krusty,il Clown,male
-Ralph,Winchester,male
-Julius,Hibbert,male
+nome,cognome,genere
+Homer,Simpson,maschio
+Bart,Simpson,maschio
+Marge,Simpson,femmina
+Lisa,Simpson,femmina
+Abraham,Simpson,maschio
+Montgomery,Burns,maschio
+Waylon,Smithers,maschio
+Apu,Nahasapeemapetilon,maschio
+Ned,Flanders,maschio
+Boe,Szyslak,maschio
+Edna,Caprapall,femmina
+Nelson,Muntz,maschio
+Luann,Van Houten,femmina
+Clancy,Winchester,maschio
+Patty,Bouvier,femmina
+Selma,Bouvier,femmina
+Bob,Telespalla,maschio
+Krusty,il Clown,maschio
+Ralph,Winchester,maschio
+Julius,Hibbert,maschio

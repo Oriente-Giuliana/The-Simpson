@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <title> The Simpson Personaggi </title>
     </head>
+
     <body>
+
         <img src="../static/images/titolo.png" alt="Personaggi width="400">
+
         <h1> Personaggi </h1>
+
         {% for item in units %}
-            <p>
-                {{ item[0] }} 
-            </p>
+
+            <p> nome: {{ item[0] }} </p>
+            <p> cognome: {{ item[1] }} </p>
+            <p> genere: {{ item[2] }} </p>
+
+
             <img src="../static/images/{{item[0]}}.png" alt="{{item[0]}}" width="200">
+
+           
         {% endfor %}
-        <p>
-        
-        </p>
+    
     </body>
+
 </html>

@@ -16,9 +16,9 @@ mycursor.execute("CREATE DATABASE IF NOT EXISTS THE_SIMPSON")
 #Create the table for the csv data (if not exists)
 mycursor.execute("""
   CREATE TABLE IF NOT EXISTS THE_SIMPSON.personaggi(
-    Name VARCHAR(30),
-    Surname VARCHAR(30),
-    gender VARCHAR(30),
+    nome VARCHAR(30),
+    cognome VARCHAR(30),
+    genere VARCHAR(30),
     PRIMARY KEY (Name)
   );""")
 
