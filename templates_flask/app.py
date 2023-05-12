@@ -13,8 +13,8 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-@app.route('/units')
+@app.route('/')
 def PersonaggiList():
-    mycurson.execute("SELECT * FROM THE_SIMPSON")
+    mycursor.execute("SELECT * FROM THE_SIMPSON.personaggi")
     myresult=mycursor.fetchall()
     return render_template('the_simpson.html', units=myresult)

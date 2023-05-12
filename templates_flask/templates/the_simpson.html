@@ -5,12 +5,15 @@
     </head>
     <body>
         <img src="../static/images/titolo.png" alt="Personaggi width="400">
-        <h1> Homer Simpson </h1>
+        <h1> Personaggi </h1>
         {% for item in units %}
             <p>
-                Unit name: {{ item[0] }} 
+                {{ item[0] }} 
             </p>
             <img src="../static/images/{{item[0]}}.png" alt="{{item[0]}}" width="200">
         {% endfor %}
+        <p>
+        
+        </p>
     </body>
 </html>
