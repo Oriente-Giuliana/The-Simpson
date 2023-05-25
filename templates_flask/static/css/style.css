@@ -1,3 +1,49 @@
-body {
-    background-color:wheat;
+*{
+    margin:auto;
+    padding:0 ;
+    font-family: fantasy;
+    box-sizing: border-box ;
+    justify-content: center;
+    background: none;
 }
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+h1{
+    text-align:center ;
+ 
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(orange,yellow) ;
+    line-height: 1.5;
+}
+.container{
+    width: 110px;
+    max-width: 100%;
+    margin:0 auto;
+    justify-content: space-between;
+    align-content:stretch ;
+}
+.{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card{
+    flex:1 1 21rem;
+    margin: 10px 20px;
+    background:white;
+    text-align: center; 
+    background: none;
+}
+
+
+  

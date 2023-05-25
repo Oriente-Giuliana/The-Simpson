@@ -15,6 +15,6 @@ mycursor = mydb.cursor()
 
 @app.route('/')
 def PersonaggiList():
-    mycursor.execute("SELECT * FROM THE_SIMPSON.personaggi,THE_SIMPSON.doppiatori, WHERE nome=PERSONAGGIO ")
+    mycursor.execute("SELECT * FROM THE_SIMPSON.personaggi")
     myresult=mycursor.fetchall()
     return render_template('the_simpson.html', units=myresult)
