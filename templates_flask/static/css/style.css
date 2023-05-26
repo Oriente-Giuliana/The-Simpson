@@ -1,20 +1,17 @@
 *{
-    margin:auto;
+    margin:0;
     padding:0 ;
     font-family: fantasy;
     box-sizing: border-box ;
     justify-content: center;
-    background: none;
 }
 .centered-image {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-  
 h1{
     text-align:center ;
- 
 }
 body {
     width: 100%;
@@ -32,18 +29,21 @@ body {
     justify-content: space-between;
     align-content:stretch ;
 }
-.{
+
+.navbar{
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.box{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .card{
     flex:1 1 21rem;
-    margin: 10px 20px;
+    margin: 70px 20px;
     background:white;
     text-align: center; 
-    background: none;
 }
 
-
-  

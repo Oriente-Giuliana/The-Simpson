@@ -14,7 +14,7 @@ mycursor.execute("CREATE DATABASE IF NOT EXISTS THE_SIMPSON")
 
 # Switch to the database
 mycursor.execute("USE THE_SIMPSON")
-
+mycursor.execute("DROP TABLE  IF EXISTS THE_SIMPSON.personaggi")
 # Create the table for the first CSV data (personaggi) if it doesn't exist
 mycursor.execute("""
   CREATE TABLE IF NOT EXISTS personaggi(
@@ -35,9 +35,7 @@ print(simpsons_personaggi_data.head(20))
 
 # Fill the table personaggi
 for i, row in simpsons_personaggi_data.iterrows():
-    cursor = mydb.cursor()
     sql = "INSERT INTO personaggi VALUES (%s, %s, %s)"
-    cursor.execute(sql, tuple(row))
+    mycursor.execute(sql, tuple(row))
     print("Record inserted")
     mydb.commit()
-

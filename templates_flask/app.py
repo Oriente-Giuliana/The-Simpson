@@ -15,6 +15,6 @@ mycursor = mydb.cursor()
 
 @app.route('/')
 def PersonaggiList():
-    mycursor.execute("SELECT * FROM THE_SIMPSON.personaggi")
+    mycursor.execute("SELECT * FROM personaggi INNER JOIN doppiatori ON personaggi.nome = doppiatori.PERSONAGGIO")
     myresult=mycursor.fetchall()
     return render_template('the_simpson.html', units=myresult)

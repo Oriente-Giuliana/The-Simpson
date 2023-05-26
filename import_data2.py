@@ -9,19 +9,16 @@ mydb = mysql.connector.connect(
 )
 mycursor = mydb.cursor()
 
-# Create the database (if not already exists)
-mycursor.execute("CREATE DATABASE IF NOT EXISTS doppiatori")
-
 # Switch to the database
 mycursor.execute("USE THE_SIMPSON")
+
 # Create the table for the second CSV data (doppiatori) if it doesn't exist
 mycursor.execute("""
   CREATE TABLE IF NOT EXISTS doppiatori(
     PERSONAGGIO VARCHAR(30),
     `DOPPIATORE ORIGINALE` VARCHAR(30),
     `DOPPIATORE ITALIANO` VARCHAR(30),
-    PRIMARY KEY (PERSONAGGIO),
-    FOREIGN KEY (PERSONAGGIO) REFERENCES personaggi(nome)
+    PRIMARY KEY (PERSONAGGIO)
   );""")
 
 # Delete data from the table doppiatori
@@ -35,20 +32,12 @@ print(simpsons_doppiatori_data.head(20))
 
 # Fill the table doppiatori
 for i, row in simpsons_doppiatori_data.iterrows():
-    cursor = mydb.cursor()
     sql = "INSERT INTO doppiatori VALUES (%s, %s, %s)"
-    cursor.execute(sql, tuple(row))
+    mycursor.execute(sql, tuple(row))
     print("Record inserted")
     mydb.commit()
 
 # Join the two tables and retrieve the data
-mycursor.execute("USE THE_SIMPSON")
-
-myresult = mycursor.fetchall()
-
-for x in myresult:
-  print(x)
-
 mycursor.execute("SELECT * FROM personaggi INNER JOIN doppiatori ON personaggi.nome = doppiatori.PERSONAGGIO")
 myresult = mycursor.fetchall()
 
